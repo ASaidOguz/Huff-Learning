@@ -1,0 +1,26 @@
+{
+  "name": "2024-01-horse-store",
+  "version": "1.0.0",
+  "description": "<p align=\"center\"> <img src=\"https://res.cloudinary.com/droqoz7lg/image/upload/q_90/dpr_2.0/c_fill,g_auto,h_320,w_320/f_auto/v1/company/wnjnaknf11h238xdycxd?_a=BATAUVAA0\" width=\"400\" alt=\"horse-store\"> <br/>",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cyfrin/2024-01-horse-store.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Cyfrin/2024-01-horse-store/issues"
+  },
+  "homepage": "https://github.com/Cyfrin/2024-01-horse-store#readme",
+  "dependencies": {
+    "@asaidoguz/audit-parser": "^0.0.12"
+  }
+}

@@ -1,0 +1,4 @@
+file:Base_Test.t.sol tag:    @audit you can feed any horse cause there's no check that horse to be exist
+file:Base_Test.t.sol tag:    @audit you can feed a horse even if the nft not minted-> Imaginery horseId=>0 cause totalSupply used as id
+file:HorseStoreHuff.t.sol tag:   @audit there's no overflow/underflow check for feeding several-times leads to wrap up
+file:HorseStoreSolidity.t.sol tag:@audit in solidity there's arithmetic overflow/underflow revert-> 
