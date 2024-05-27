@@ -40,12 +40,25 @@
 
 #define macro SET_NUMBER_OF_HORSES()= takes(0) returns(0) {
          //get the value to store from calldata
-
+         0x04                               // stack:[4] =>push 4 bytes for func_selector removal
+         calldataload                       //[input]
          //give it a storage slot
-         [NUMBER_OF_HORSES_STORAGE_SLOT]   //stack:[NUMBER_OF_HORSES_STORAGE_SLOT]
+         [NUMBER_OF_HORSES_STORAGE_SLOT]   //stack:[NUMBER_OF_HORSES_STORAGE_SLOT,input]
          //sstore opcode
+         sstore  // sstore opcode will consume slot and value from stack
+         // stop the transaction with success!
+         stop   // stack:[func_selector,0]
 }
 
 #define macro READNUMBEROFHORSES()= takes(0) returns(0){
+           
+           [NUMBER_OF_HORSES_STORAGE_SLOT]   // stack:[NUMBER_OF_HORSES_STORAGE_SLOT]
+           sload                             // stack:[value]
+           0x00                              // stack:[0,value]
+           mstore                            // stack:[]        //Memory:[value]
+           //0x20-> 32 bytes -1 Word
+           0x20                              // stack:[20]      //Memory:[value]-->preperation for returning value from memory
+           0x00                              // stack:[0,20]    //Memory:[value]-->preperation for returning value from memory
+           return
 
 }
