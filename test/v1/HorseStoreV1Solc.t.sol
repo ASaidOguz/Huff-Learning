@@ -2,4 +2,6 @@
 pragma solidity 0.8.20;
 
 import{Base_TestV1} from "./Base_TestV1.t.sol";
-contract HorseStoreSolc is Base_TestV1{}
+contract HorseStoreSolc is Base_TestV1{
+    //no need to override setup function cause we deploy the v1 as it's...
+}
